@@ -14,6 +14,9 @@ from torch import fx, nn
 from torch.fx.graph_module import _copy_attr
 from typing import Any, Callable, Dict, List, Optional, Tuple, Union
 
+import sys
+import os
+sys.path.append(os.path.dirname(sys.path[0]))
 from blocklize.block_meta import MODEL_BLOCKS
 
 __all__ = ["create_feature_extractor", "get_graph_node_names"]
